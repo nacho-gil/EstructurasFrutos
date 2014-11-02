@@ -1,0 +1,13 @@
+{
+  "name": "estructuras-frutos",
+  "version": "1.0.0",
+  "description": "Estructuras Frutos",
+  "author": "Nacho Gil <nacho.gil.tra@gmail.com>",
+  "dependencies": {},
+  "engine": ">= 0.8.0",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-connect": "~0.5.0",
+    "matchdep": "~0.1.2"
+  }
+}
