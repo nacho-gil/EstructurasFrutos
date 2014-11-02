@@ -15,7 +15,7 @@
    # Tablet Showcase
 */
 
-$(document).ready(function(){
+$(document).ready(function() {
 /*--------------------------------------------------------*/
 /* # JAVASCRIPT CHECK */
 /*--------------------------------------------------------*/
@@ -51,10 +51,10 @@ $(function(){
 	});
 
 
-	$(window).scroll(function(){
-		menu.slideUp(600);
-		$('#wrapper').removeClass('pushed');
-	});
+	// $(window).scroll(function(){
+	// 	menu.slideUp(600);
+	// 	$('#wrapper').removeClass('pushed');
+	// });
 
 	menuItems.click(navigate);
 	$(document).on('click', '.btn-navigate', navigate);
@@ -62,13 +62,13 @@ $(function(){
 });
 
 $(function(){
-	$(window).scroll(function () {
+	$(window).scroll(frutos.utils.throttle(function () {
 		if ($(this).scrollTop() > 600) {
 			$('#back-top').removeClass('downscaled');
 		} else {
 			$('#back-top').addClass('downscaled');
 		}
-	});
+	}));
 	$('#back-top').click(function(){
 			$('body,html').animate({ scrollTop: 0 }, 800);
 			return false;
@@ -376,5 +376,47 @@ frutos.setMap = function(lat, lng, el) {
 // longitude -2.70333
 frutos.setMap(42.86044, -2.70333, 'map');
 
+/*--------------------------------------------------------*/
+/* # Utilities */
+/*--------------------------------------------------------*/
 
+// shim layer with setTimeout fallback
+window.requestAnimationFrame = (function() {
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+frutos.utils = (function (argument) {
+    /**
+     * throttleAnimationFrame is used for the scroll event handler
+     * @param  {Function} fn is the callback to be executed
+     * @return {function}      function that fires our callback on requestAnimationFrame
+     */
+    function throttleAnimationFrame(fn) {
+        var ticker;
+
+        return function() {
+            var context = this,
+                args = arguments;
+
+            if (!ticker) {
+                /*
+                 * note that requestAnimationFrame is polyfilled
+                 */
+                ticker = window.requestAnimationFrame(function() {
+                    fn.apply(context, args);
+                    ticker = null;
+                });
+            }
+        };
+    }
+
+    return {
+    	throttle: throttleAnimationFrame
+    }
+}());
 
