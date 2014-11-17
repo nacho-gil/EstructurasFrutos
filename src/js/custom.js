@@ -31,32 +31,24 @@ $(function(){
 		navBar = $("#header"),
 		navBarHeight = navBar.outerHeight()+1,
 		menuItems = $(".menu li a"),
+		logo = $(".js-logo"),
 		navigate = function(e) {
 			var href = $(this).attr("href"),
-				offsetTop = href === "#" ? 0 : $(href).offset().top - (menu.is(":visible") ? navBarHeight : -25) - 50;
+				offsetTop = href === "#" ? 0 : $(href).offset().top - 20;
 
 			$('html, body').stop().animate({
 					scrollTop: offsetTop
 			}, 800);
-			menu.slideUp(300);
-			$('#wrapper').removeClass('pushed');
+			menu.removeClass('menu-opened');
 			e.preventDefault();
 		};
 
-	menu.hide();
-
 	$(".menu-btn i").click(function(){
-		menu.slideToggle(300);
-		$('#wrapper').toggleClass('pushed');
+		menu.toggleClass('menu-opened');
 	});
 
-
-	// $(window).scroll(function(){
-	// 	menu.slideUp(600);
-	// 	$('#wrapper').removeClass('pushed');
-	// });
-
 	menuItems.click(navigate);
+	logo.click(navigate);
 	$(document).on('click', '.btn-navigate', navigate);
 
 });

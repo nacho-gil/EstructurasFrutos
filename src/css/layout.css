@@ -120,10 +120,11 @@ p a, p a:visited {line-height: inherit;}
 
 .logo {
     float: left;
-    font-family: "Roboto Slab", serif;
-    font-size: 21px;
+    font-family: "Open Sans", "Roboto Slab", serif;
+    font-size: 23px;
+    font-weight: bold;
     color: white;
-    line-height: 72px;
+    line-height: 70px;
     letter-spacing: -1px;
 }
 
@@ -143,8 +144,20 @@ a.logo:hover {
 
 .menu-btn button {background: transparent; border: 0; cursor: pointer;}
 
-.menu {background: #3A3E3D; width: 100%; height: auto; margin-top: 72px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.7); position: fixed; z-index: 9999;
-	   -moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.5); -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.5); box-shadow: inset 0 0 15px rgba(0,0,0,0.5); top: 0;}
+.menu {
+    background: #3A3E3D; 
+    width: 100%; 
+    height: auto; 
+    /*margin-top: 72px; */
+    padding: 40px 0; 
+    /*border-top: 1px solid rgba(255,255,255,0.7); */
+    /*position: fixed; */
+    z-index: 9999;
+	-moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5); 
+    /*top: 0;*/
+}
 
 .menu li {color: #fff; float: left; padding: 0 13px;}
 
@@ -156,7 +169,11 @@ a.logo:hover {
 
 .menu li a:hover {text-decoration: none;}
 
-.menu i {color: #626463; font-size: 15px;}
+.menu i {
+    color: #626463; 
+    font-size: 15px;
+    margin-right: 5px;
+}
 
 /*--------------------------------------------------------*/
 /* # SLIDER */
@@ -538,7 +555,7 @@ a.logo:hover {
 }
 
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
+@media only screen and (min-width: 959px) {
 
 .tablet-mockup-bg{margin-top: 0 !important;}
 
@@ -546,10 +563,92 @@ a.logo:hover {
 
 }
 
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (min-width: 959px) {
+
+.tablet-mockup-bg{margin-top: 0 !important;}
+
+.intro-text{margin: 0 auto 80px;}
+
+}
+
+/* From 768px */
+@media only screen and (min-width: 768px) {
+
+.logo {
+    font-size: 20px;
+    width: 105%;
+}
+
+.menu {
+    display: block !important;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 30px 0;
+    position: static;
+    float: right;
+    width: auto;
+}
+
+.menu i {
+    display: none;
+}
+
+.menu li {
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.menu li a {
+    margin: 0;
+    color: #EFEFEF;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.menu li a i {
+    color: #EFEFEF;
+}
+
+.menu li a:hover,
+.menu li a:hover i {
+    color: #FFF;
+}
+
+.menu-btn {
+    display: none;
+}
+
+}
+
+@media only screen and (min-width: 960px) {
+
+.logo {
+    font-size: 23px;
+    width: auto;
+}
+
+.menu {
+    padding: 28px 0;
+}
+
+.menu i {
+    display: inline;
+}
+
+.menu li {
+    padding: 0 10px;
+}
+
+}
+
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-
-.menu li {padding: 0 3px;}
 
 .include-box p {width: 59%;}
 
@@ -606,11 +705,43 @@ a.logo:hover {
 
 .slide p {width: 100%; text-align: center;}
 
-.menu {padding: 25px 0;}
+.menu-wrapper {
+    overflow: hidden;
+}
 
-.menu li {margin: 15px 0; padding: 0 9px;}
+.menu {
+    padding: 8px 0;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    -ms-transform: translate(0, -100%);
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+}
 
-.menu li:last-child {margin-bottom: 0;}
+.no-csstransforms .menu {
+    display: none;
+}
+
+.menu.menu-opened {
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);   
+}
+
+.no-csstransforms .menu.menu-opened {
+    display: block;
+}
+
+.menu li {
+    text-align: center;
+    border-bottom: 1px dotted #848484;
+    padding: 0px 10px 10px;
+    margin: 10px 40px 0;
+    line-height: 30px;
+    float: none;
+}
+
+.menu li:last-child {border-bottom: 0;}
 
 #features {height: auto; padding-bottom: 60px;}
 
@@ -688,11 +819,13 @@ a.logo:hover {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 
+.logo {
+    font-size: 20px;
+}
+
 .logo span {
     display: none;
 }
-
-.menu li {padding: 0;}
 
 .slide h2, .slide h1 {font-size: 20px;}
 
