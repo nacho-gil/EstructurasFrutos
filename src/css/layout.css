@@ -78,7 +78,6 @@ p a, p a:visited {line-height: inherit;}
 
 #back-top.downscaled {-webkit-transform: scale(0.0); -moz-transform: scale(0.0); -ms-transform: scale(0.0); -o-transform: scale(0.0); transform: scale(0.0);}
 
-.no-js #wrapper {top: 96px;}
 
 .btn {-webkit-border-radius: 3px; border-radius: 3px; font-family: "Roboto Slab",serif; font-size: 19px; padding: 10px 20px 13px; cursor: pointer; color: #fff;}
 
