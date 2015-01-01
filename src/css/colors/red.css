@@ -1,0 +1,42 @@
+/* Template: FlatBook | Author: eriktailor | Version: 1.0 */
+/*--------------------------------------------------------*/
+
+/*--------------------------------------------------------*/
+/* # RED COLOR SKIN */
+/*--------------------------------------------------------*/
+p a, p a:visited {color: #E85953;}
+
+h2,
+h2 a {color: #E85953;}
+
+.menu li a:hover {color: #E85953;}
+
+.btn {background: #E85953;}
+
+.btn:hover {background: #CF5550;}
+
+.btn.grey {color: #E85953;}
+
+.btn.grey:hover {color: #E85953;}
+
+.section-title {color: #E85953;}
+
+.section-title-bullet {background: #E85953;}
+
+#header {background: #E85953;}
+
+.feature h2 {color: #E85953;}
+
+.price-table h3 {background: #E85953;}
+
+.contact-bar {background: #E85953;}
+
+.social-icons i {color: #E85953;}
+
+.social-icons i:hover {color: #BD4A46;}
+
+.slimScrollBar {background: #E85953 !important;}
+
+.tablet-mockup-bg {background-color: #E85953 !important;}
+
+.product-item:hover {background-color: #E85953;}
