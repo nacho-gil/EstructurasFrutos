@@ -7,7 +7,7 @@ $message = $_POST['message'];
 
 $to = 'info@estructurasfrutos.com';
 $subject = 'Mensaje desde estructurasfrutos.com';
-$message = 'FROM: '.$name.' EMAIL: '.$email.' PHONE: '.$phone.' MESSAGE: '.$message;
+$message = "DE: ".$name."\r\nEMAIL: ".$email."\r\nTELÉFONO: ".$phone."\r\nMENSAJE: ".$message;
 $headers = 'From: '. $email. "\r\n";
 
 
