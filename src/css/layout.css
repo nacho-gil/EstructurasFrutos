@@ -232,7 +232,7 @@ a.logo:hover {
 .include-box i {background: url('../img/quote_bg.png') no-repeat; width:63px; height: 76px; margin: 20px 17px 0 60px;
 				display: table; color: #c9cccb; font-size: 25px; text-align: center; line-height: 65px; float: left;}
 
-.include-box h2 {font-size: 20px; float: left;}
+.include-box h2 {font-size: 20px; }
 
 .include-box p {float: left; width: 68%;}
 
