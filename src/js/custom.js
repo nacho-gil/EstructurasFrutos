@@ -27,7 +27,7 @@ $("html").removeClass("no-js").addClass("js");
 
 $(function(){
 
-	var menu = $("#menu"),
+	var menu = $(".menu-wrapper"),
 		navBar = $("#header"),
 		navBarHeight = navBar.outerHeight()+1,
 		menuItems = $(".menu li a"),
@@ -299,6 +299,8 @@ $(function () {
 		$wrapper.isotope({
 			filter: selector
 		});
+		// Refresh Waypoints
+		$.waypoints('refresh');
 	});
 });
 

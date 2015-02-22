@@ -117,6 +117,10 @@ p a, p a:visited {line-height: inherit;}
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
 }
 
+.header-container {
+    height: 72px;
+}
+
 .logo {
     float: left;
     font-family: "Open Sans", "Roboto Slab", serif;
@@ -151,7 +155,7 @@ a.logo:hover {
     padding: 40px 0; 
     /*border-top: 1px solid rgba(255,255,255,0.7); */
     /*position: fixed; */
-    z-index: 9999;
+    /*z-index: 9999;*/
 	-moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.5); 
     -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.5); 
     box-shadow: inset 0 0 15px rgba(0,0,0,0.5); 
@@ -704,12 +708,13 @@ a.logo:hover {
 
 .slide p {width: 100%; text-align: center;}
 
-.menu-wrapper {
-    overflow: hidden;
+.logo-wrapper {
+    position: relative;
+    z-index: 2;
 }
 
-.menu {
-    padding: 8px 0;
+.menu-wrapper {
+    overflow: hidden;
     -webkit-transition: -webkit-transform 300ms;
     transition: transform 300ms;
     -ms-transform: translate(0, -100%);
@@ -717,17 +722,21 @@ a.logo:hover {
     transform: translate(0, -100%);
 }
 
-.no-csstransforms .menu {
+.menu {
+    padding: 8px 0;
+}
+
+.no-csstransforms .menu-wrapper {
     display: none;
 }
 
-.menu.menu-opened {
+.menu-wrapper.menu-opened {
     -ms-transform: translate(0, 0);
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);   
 }
 
-.no-csstransforms .menu.menu-opened {
+.no-csstransforms .menu-wrapper.menu-opened {
     display: block;
 }
 
