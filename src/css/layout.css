@@ -477,12 +477,16 @@ a.logo:hover {
 /* # ABOUT */
 /*--------------------------------------------------------*/
 #about {background: #fff;}
+.profile-image { 
+    width: 260px; 
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+}
 
 
 /*--------------------------------------------------------*/
 /* # MAP */
 /*--------------------------------------------------------*/
-#map {width: 100%; height: 500px;}
+#map {width: 100%; height: 250px;}
 
 /*--------------------------------------------------------*/
 /* # FOOTER */
@@ -627,6 +631,8 @@ a.logo:hover {
     display: none;
 }
 
+#map {height: 500px;}
+
 }
 
 @media only screen and (min-width: 960px) {
@@ -675,7 +681,7 @@ a.logo:hover {
 
 .price-table ul {padding: 30px 20px;}
 
-.profile-image {width: 100%;}
+.profile-image {/*width: 100%;*/}
 
 .slide h1, .slide h2 {font-size: 24px; padding: 5px 15px;}
 
