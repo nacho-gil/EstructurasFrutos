@@ -12,6 +12,6 @@ $headers = 'From: '. $email. "\r\n";
 
 
 mail($to, $subject, $message, $headers); //This method sends the mail.
-echo "Thanks, your email was sent!"; // success message
+echo "Gracias por contactar, tu email ha sido enviado."; // success message
 
 ?>
