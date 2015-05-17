@@ -209,9 +209,9 @@ a.logo:hover {
 
 .slide p {color: #fff; font-size: 14px; line-height: 25px; width: 460px; margin: 20px 0 40px;}
 
-.slide .model {float: right; width: 50%; margin-top: 180px;}
+.slide .model {float: right; width: 50%; margin-top: 120px;}
 
-.slide .model img {float: right; -moz-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3); box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);}
+.slide .model img {max-height: 450px; float: right; -moz-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3); box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);}
 
 .slide h2, .slide h1 {-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; -o-animation-delay: 0.3s; -ms-animation-delay: 0.3s; animation-delay: 0.3s;}
 
@@ -689,7 +689,7 @@ a.logo:hover {
 
 .slide p {width: 86%;}
 
-.slide .model {margin-top: 228px;}
+.slide .model {margin-top: 125px;}
 
 .js .app-ov img {width: 54%;}
 
