@@ -16,6 +16,10 @@ module.exports = function(grunt) {
                 src: 'src/mailer.php',
                 dest: 'dist/mailer.php'
             },
+            scripts: {
+                src: 'src/js/jquery.1.10.2.js',
+                dest: 'dist/js/jquery.1.10.2.js'
+            },
             fonts: {
                 expand: true, 
                 cwd: 'src/',
